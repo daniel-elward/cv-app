@@ -7,8 +7,10 @@ import UserInput from './components/userInput.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Section heading="Personal Details" />
-      <UserInput inputName="Name" />
+      <UserInput />
+
+      {/* <UserInput inputName="Name" />
       <UserInput inputName="Age" />
-      <UserInput inputName="Email" />
+      <UserInput inputName="Email" /> */}
   </StrictMode>,
 )

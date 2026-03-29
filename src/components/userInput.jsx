@@ -1,46 +1,59 @@
 import { useState } from "react";
 
-export default function UserInput(props){
-    const [input, setInput] = useState("");
-    const [inputComplete, setInputComplete] = useState("");
+export default function UserInput(){
+
+    const [nameInput, setNameInput] = useState("");
+    const [ageInput, setAgeInput] = useState("");
+    const [emailInput, setEmailInput] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
 
-    const inputHandler = (event) => {
-        setInput(event.target.value);
-    };
-
-    const submitHandler = (event) => {
-        event.preventDefault();
-        setInputComplete(input);
+    function handleSubmit(){
         setIsSubmit(true);
     };
 
-    const reset = () => {
+    function handleEdit(){
         setIsSubmit(false);
-        setInput(input);
-        setInputComplete("");
     };
 
     return (
         <>
-            {isSubmit ? (
-                <div>
-                    <h1>{inputComplete}</h1>
-                    <button onClick={reset}>Edit</button>
-                </div>
-            ) : (
-                <div>
-                    <form onSubmit={submitHandler}>
-                        <label>{props.inputName}</label> <br />
+        {isSubmit ? 
+            <div>
+                <h1>{nameInput}</h1>
+                <h1>{ageInput}</h1>
+                <h1>{emailInput}</h1>
+                <button type="button" onClick={handleEdit}>edit</button>
+            </div>
+
+            :
+            
+            <div>
+                    <form id="personalDetails">
+                        <label>Name</label> <br />
                         <input 
                             type="text"
-                            value={input}
-                            onChange={inputHandler}/> <br />
+                            name="name"
+                            value={nameInput}
+                            onChange={(e) => {setNameInput(e.target.value)}}/> <br />
 
-                        <button type="submit">submit</button>
+                        <label>Age</label> <br />
+                        <input 
+                            type="text"
+                            name="age"
+                            value={ageInput}
+                            onChange={(e) => {setAgeInput(e.target.value)}}/> <br />
+
+                        <label>Email</label> <br />
+                        <input 
+                            type="text"
+                            name="email"
+                            value={emailInput}
+                            onChange={(e) => {setEmailInput(e.target.value)}}/> <br />
+
+                        <button type="button" onClick={handleSubmit}>submit</button>
                     </form>
                 </div>
-            )}
+        }
         </>
     );
 };
