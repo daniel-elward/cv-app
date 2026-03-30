@@ -19,7 +19,7 @@ export default function Personal(){
     return (
         <>
         {isSubmit ? 
-            <div>
+            <div className="dataSection">
                 <label>Name</label> <br />
                 <input 
                     disabled
@@ -46,7 +46,7 @@ export default function Personal(){
 
             :
             
-            <div>
+            <div className="dataSection">
                     <form id="personalDetails">
                         <label>Name</label> <br />
                         <input 

@@ -1,0 +1,31 @@
+html {
+    background-color: rgb(25, 128, 218);
+}
+
+.banner h1 {
+    color: rgb(25, 128, 218);
+}
+
+.banner {
+    height: 130px;
+    align-content: center;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.sectionHeading h1 {
+    color: rgb(25, 128, 218);
+}
+
+.sectionHeading {
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 0 0 0 40px;
+}
+
+.dataSection{
+    width: 70%;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 0 auto;
+}

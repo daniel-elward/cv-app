@@ -21,7 +21,7 @@ export default function Work(){
     return (
         <>
         {isSubmit ? 
-            <div>
+            <div className="dataSection">
                 <label>Company Name</label> <br />
                 <input 
                     disabled
@@ -63,7 +63,7 @@ export default function Work(){
 
             :
             
-            <div>
+            <div className="dataSection">
                 <form id="personalDetails">
                 <label>Company Name</label> <br />
                 <input 

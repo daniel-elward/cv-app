@@ -20,7 +20,7 @@ export default function Education(){
     return (
         <>
         {isSubmit ? 
-            <div>
+            <div className="dataSection">
                 <label>School Name</label> <br />
                 <input 
                     disabled
@@ -54,7 +54,7 @@ export default function Education(){
 
             :
             
-            <div>
+            <div className="dataSection">
                 <form id="personalDetails">
                     <label>School Name</label> <br />
                     <input 
@@ -68,6 +68,7 @@ export default function Education(){
                         value={studyInput}
                         onChange={(e) => {setStudyInput(e.target.value)}}/> <br />
 
+                    <label>Date From</label> <br />
                     <input 
                         type="date"
                         value={dateFromInput}
