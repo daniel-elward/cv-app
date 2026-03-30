@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function UserInput(){
+export default function Education(){
 
     const [nameInput, setNameInput] = useState("");
     const [studyInput, setStudyInput] = useState("");
@@ -40,14 +40,14 @@ export default function UserInput(){
                     disabled
                     type="date"
                     value={dateFromInput}
-                    onChange={(e) => {setEmailInput(e.target.value)}}/> <br />
+                    onChange={(e) => {setDateFromInput(e.target.value)}}/> <br />
 
                 <label>Date To</label> <br />
                 <input
                     disabled 
                     type="date"
                     value={dateToInput}
-                    onChange={(e) => {setEmailInput(e.target.value)}}/> <br />
+                    onChange={(e) => {setDateToInput(e.target.value)}}/> <br />
 
                 <button type="button" onClick={handleEdit}>edit</button>
             </div>
